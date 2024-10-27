@@ -1,51 +1,86 @@
-
-const QuizMainScreen = () => {
-  // Example values for leaderboard and last quiz data
-  const worldRanking = 20;
-  const pointsEarned = 12000;
-  const lastQuizTitle = 'UI/UX Design';
-  const lastQuizPoints = 150;
-  const lastQuizRank = 1;
-
-  return (
-    <View style={styles1.quizContainer}>
-      {/* World Ranking and Points Earned */}
-      <View style={styles1.statsContainer}>
-        <View style={styles1.stat}>
-          <Image
-            source={{ uri: 'https://example.com/rank-image.png' }} // Replace with your leaderboard image URL
-            style={styles1.icon}
-          />
-          <Text style={styles1.statText}>{worldRanking} World Ranking</Text>
-        </View>
-        <View style={styles1.stat}>
-          <Image
-            source={{ uri: 'https://example.com/points-icon.png' }} // Replace with your points icon URL
-            style={styles1.icon}
-          />
-          <Text style={styles1.statText}>{pointsEarned} Points Earned</Text>
-        </View>
-      </View>
-
-      {/* Last Quiz Result */}
-      <View style={styles1.lastQuizContainer}>
-        <Text style={styles1.lastQuizTitle}>Last Quiz</Text>
-        <Text style={styles1.quizDetails}>{lastQuizTitle}</Text>
-        <Text style={styles1.quizDetails}>Points: {lastQuizPoints}</Text>
-        <Text style={styles1.quizDetails}>Rank: {lastQuizRank}</Text>
-      </View>
-
-      {/* Featured Section */}
-      <View style={styles1.featuredContainer}>
-        <Text style={styles1.featuredText}>Amazing Quizzes lined up for you all in</Text>
-        <Text style={styles1.featuredText}>Upcoming Months</Text>
-        <Text style={styles1.stayTuned}>Stay Tuned..!</Text>
-      </View>
-
-      {/* View All Quizzes Button (without actual navigation logic) */}
-      <TouchableOpacity style={styles1.viewQuizzesButton}>
-        <Text style={styles1.viewQuizzesText}>View All Quizzes</Text>
-      </TouchableOpacity>
-    </View>
-  );
-};
+const stylesnew = StyleSheet.create({
+  mainContainer: {
+    flex: 1,
+    padding: 20,
+    backgroundColor: '#FAFAFA', // Light background for better contrast
+  },
+  topRightIcons: {
+    position: 'absolute',
+    top: 20,
+    right: 20,
+    flexDirection: 'row',
+    alignItems: 'center',
+  },
+  announcementTitle: {
+    fontSize: 24,
+    fontWeight: 'bold',
+    color: '#333', // Darker text for better readability
+    marginBottom: 15,
+  },
+  announcementItem: {
+    marginRight: 15,
+    backgroundColor: '#FFFFFF', // White background for announcements
+    borderRadius: 10,
+    elevation: 3, // Shadow effect for depth
+    padding: 10,
+    alignItems: 'center',
+    width: 120, // Fixed width for a more uniform appearance
+  },
+  announcementImage: {
+    width: 80,
+    height: 80,
+    borderRadius: 10,
+    marginBottom: 5,
+  },
+  postTitle: {
+    fontSize: 24,
+    fontWeight: 'bold',
+    color: '#333',
+    marginTop: 20,
+    marginBottom: 15,
+  },
+  postItem: {
+    padding: 15,
+    backgroundColor: '#FFFFFF',
+    marginBottom: 15,
+    borderRadius: 10,
+    elevation: 2,
+  },
+  postImage: {
+    width: '100%',
+    height: 150,
+    borderRadius: 10,
+    marginBottom: 10,
+  },
+  tagContainer: {
+    flexDirection: 'row',
+    marginVertical: 5,
+    flexWrap: 'wrap', // Allow tags to wrap to the next line if necessary
+  },
+  tag: {
+    fontSize: 12,
+    backgroundColor: '#E0E0E0', // Light gray background for tags
+    padding: 5,
+    borderRadius: 5,
+    marginRight: 5,
+  },
+  postIcons: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    marginTop: 10,
+  },
+  likeCount: {
+    fontSize: 16,
+    color: '#555', // Lighter color for like count
+  },
+  bottomNav: {
+    flexDirection: 'row',
+    justifyContent: 'space-around',
+    alignItems: 'center',
+    padding: 10,
+    backgroundColor: '#FFFFFF',
+    borderTopWidth: 1,
+    borderTopColor: '#DDDDDD',
+  },
+});
